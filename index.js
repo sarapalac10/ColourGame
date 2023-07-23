@@ -9,7 +9,6 @@ let level = 0;
 
 //Start the game
 $(document).on( "keydown", function() {
-    alert( "Handler for `keydown` called." );
     if (!started) {
         $("#level-title").text("level " + level);
         $('p').remove();
@@ -83,8 +82,8 @@ function nextSequence() {
     var randomChosenColour= buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
 
-    console.log('el color random del juego es: ',randomChosenColour)
-    console.log('patron del juego:',gamePattern);
+    //console.log('el color random del juego es: ',randomChosenColour)
+    //console.log('patron del juego:',gamePattern);
 
     $('#' + randomChosenColour).delay(50).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColour);
